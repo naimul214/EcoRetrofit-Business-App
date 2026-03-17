@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/app/contexts/AuthProvider';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Capstone Project Manager',
-  description: 'A project management tool for capstone teams',
+  title: 'EcoRetrofit - Autonomous Building Intelligence',
+  description: 'AI-driven energy optimization service for commercial buildings in Canada.',
 };
 
 export default function RootLayout({
@@ -16,10 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-slate-900 text-slate-50 min-h-screen flex flex-col`}>
         <AuthProvider>
-          {children}
+          <Navbar />
+          <div className="flex-1 pt-16">
+            {children}
+          </div>
+          <Footer />
         </AuthProvider>
       </body>
     </html>
