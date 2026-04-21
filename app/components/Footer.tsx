@@ -58,6 +58,14 @@ export default function Footer() {
           <p className="text-base text-slate-400 xl:text-center">
             &copy; 2026 EcoRetrofit — Powering the Next Generation of Canadian Infrastructure.
           </p>
+          <div className="mt-4 flex items-center gap-5 sm:mt-0">
+            <Link href="/terms" className="text-sm text-gray-500 hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/privacy" className="text-sm text-gray-500 hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
