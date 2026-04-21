@@ -20,6 +20,10 @@ enum Role {
   ADMIN
 }
 
+enum ClientRole {
+  PROPERTY_MANAGER
+}
+
 model User {
   id            String    @id @default(cuid())
   email         String    @unique
@@ -85,6 +89,19 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Client {
+  id        String     @id @default(cuid())
+  firstName String
+  lastName  String
+  workEmail String     @unique
+  company   String
+  role      ClientRole @default(PROPERTY_MANAGER)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([workEmail])
 }
 
 // ============================================
