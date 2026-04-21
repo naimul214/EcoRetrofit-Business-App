@@ -1,0 +1,31 @@
+name: Build, Test, Deploy Pipeline
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Application
+        run: |
+          echo "Building application..."
+          sleep 2
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+          sleep 2
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Application
+        run: |
+          echo "Deploying application..."
+          sleep 2
