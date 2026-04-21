@@ -28,9 +28,9 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="hidden md:flex items-center">
-            <a href="#contact" className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-slate-900 bg-primary-500 hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:ring-offset-slate-900 transition-colors">
+            <Link href="/contact" className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-slate-900 bg-primary-500 hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:ring-offset-slate-900 transition-colors">
               Get Started
-            </a>
+            </Link>
           </div>
           <div className="flex md:hidden items-center">
             <button className="text-slate-300 hover:text-white">

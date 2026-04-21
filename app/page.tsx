@@ -11,7 +11,7 @@ export default function Home() {
         <div className="relative max-w-5xl mx-auto text-center z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/50 mb-8 backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse"></span>
-            <span className="text-sm font-medium text-slate-300">EcoRetrofit BrainBox AI Engine Active</span>
+            <span className="text-sm font-medium text-slate-300">EcoRetrofit AI Engine Active</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6">
